@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Press_Start_2P } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { LanguageProvider } from "./components/LanguageProvider";
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} ${pressStart.variable} font-sans antialiased bg-[#090B13] text-[#E0E0E0]`}
       >
         <LanguageProvider>{children}</LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );

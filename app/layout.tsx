@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Poppins, Press_Start_2P } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "./components/LanguageProvider";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -14,9 +15,19 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
+const pressStart = Press_Start_2P({
+  variable: "--font-pixel",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
   title: "Elif Altun - Portfolio",
-  description: "Yazılım Mühendisliği Öğrencisi | Modern Minimalist Portföy",
+  description: "Yazılım Mühendisliği Öğrencisi | AI, ML ve Veri Odaklı Yazılım Geliştirici",
+  icons: {
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -27,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="tr" className="dark scroll-smooth">
       <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-[#121212] text-[#E0E0E0]`}
+        className={`${inter.variable} ${poppins.variable} ${pressStart.variable} font-sans antialiased bg-[#090B13] text-[#E0E0E0]`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

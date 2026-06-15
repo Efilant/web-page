@@ -1,73 +1,125 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import { useLanguage } from './LanguageProvider';
+
 interface EducationItem {
-  degree: string;
+  degree: { tr: string; en: string };
   institution: string;
-  period: string;
-  location?: string;
-  description?: string;
+  period: { tr: string; en: string };
+  location: { tr: string; en: string };
+  details: { tr: string[]; en: string[] };
+  type: 'university' | 'certification';
 }
 
 const education: EducationItem[] = [
   {
-    degree: 'Yazılım Mühendisliği',
+    degree: { tr: 'Yazılım Mühendisliği Lisans', en: 'B.S. Software Engineering' },
     institution: 'Kocaeli Üniversitesi',
-    period: '2022 - Devam Ediyor',
-    location: 'Kocaeli, Türkiye',
-    description: '2. sınıf öğrencisi',
+    period: { tr: '2022 – Devam Ediyor', en: '2022 – Present' },
+    location: { tr: 'Kocaeli, Türkiye', en: 'Kocaeli, Turkey' },
+    type: 'university',
+    details: {
+      tr: [
+        '3. sınıf öğrencisi; yapay zeka, makine öğrenmesi ve veri odaklı yazılım geliştirme alanlarına odaklanıyorum',
+        'İlgili dersler: Veri Yapıları, Algoritmalar, Nesne Yönelimli Programlama, Veritabanı Sistemleri, Yapay Zeka',
+        'TÜBİTAK 2209-A destekli Dijital Gebelik Takibi projesinde akademik araştırma deneyimi',
+      ],
+      en: [
+        'Third-year student focused on artificial intelligence, machine learning, and data-driven software development',
+        'Relevant coursework: Data Structures, Algorithms, OOP, Database Systems, Artificial Intelligence',
+        'Academic research experience on the TÜBİTAK 2209-A funded Digital Pregnancy Tracking project',
+      ],
+    },
   },
 ];
 
-export default function Education() {
-  return (
-    <section id="education" className="px-4 py-20 pt-32 relative z-10">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#E0E0E0] mb-4">
-            Eğitim
-          </h2>
-          <div className="h-1 w-24 bg-[#EC4899]"></div>
-        </div>
+const labels = {
+  tr: {
+    kicker: 'Akademik',
+    title: 'Eğitim',
+    university: 'Üniversite',
+    certification: 'Sertifika',
+  },
+  en: {
+    kicker: 'Academic',
+    title: 'Education',
+    university: 'University',
+    certification: 'Certification',
+  },
+};
 
-        <div className="space-y-6">
-          {education.map((edu, index) => (
-            <div
-              key={index}
-              className="bg-[#1E1E1E] border border-[#2A2A2A] rounded-lg p-6 hover:border-[#F9A8D4]/50 transition-all duration-300"
-            >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between">
-                <div className="flex-1">
-                  <h4 className="font-heading text-xl md:text-2xl font-bold text-[#E0E0E0] mb-2">
-                    {edu.degree}
-                  </h4>
-                  <p className="text-lg text-[#EC4899] mb-2">
-                    {edu.institution}
-                  </p>
-                  {edu.location && (
-                    <p className="text-sm text-[#E0E0E0]/60 mb-2">
-                      📍 {edu.location}
-                    </p>
-                  )}
-                  {edu.description && (
-                    <p className="text-sm text-[#E0E0E0]/70 mt-2">
-                      {edu.description}
-                    </p>
-                  )}
+const typeStyles = {
+  university: 'bg-[#22D3EE]/15 text-[#22D3EE] border-[#22D3EE]/40',
+  certification: 'bg-[#A855F7]/20 text-[#C084FC] border-[#A855F7]/40',
+};
+
+export default function Education() {
+  const { language } = useLanguage();
+  const t = labels[language];
+
+  return (
+    <section id="education" className="section-shell section-theme-education">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <span className="section-kicker">{t.kicker}</span>
+          <h2 className="font-heading section-title">{t.title}</h2>
+          <div className="section-divider" />
+        </motion.div>
+
+        <div className="relative">
+          <div className="absolute left-4 md:left-6 top-2 bottom-2 w-px bg-gradient-to-b from-[#22D3EE] via-[#60A5FA] to-[#A855F7]/30" />
+
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.06 }}
+                className="relative pl-12 md:pl-16"
+              >
+                <div className="absolute left-2.5 md:left-4 top-6 w-3 h-3 rounded-full bg-gradient-to-br from-[#22D3EE] to-[#60A5FA] border-2 border-[#090B13] shadow-md shadow-[#22D3EE]/30" />
+
+                <div className="glass-card p-5 md:p-6">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
+                    <div>
+                      <h3 className="font-heading text-lg md:text-xl font-bold text-[#F5F7FF]">
+                        {edu.degree[language]}
+                      </h3>
+                      <p className="text-[#8EF4FF] text-sm md:text-base mt-0.5">{edu.institution}</p>
+                      <p className="text-xs text-[#E6EEFF]/50 mt-1">{edu.location[language]}</p>
+                    </div>
+                    <div className="shrink-0">
+                      <span
+                        className={`inline-block px-2.5 py-0.5 text-xs rounded-full border font-medium ${typeStyles[edu.type]}`}
+                      >
+                        {t[edu.type]}
+                      </span>
+                      <p className="text-xs text-[#E6EEFF]/50 mt-2">{edu.period[language]}</p>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-1.5">
+                    {edu.details[language].map((item, i) => (
+                      <li key={i} className="text-sm text-[#E6EEFF]/75 flex items-start gap-2">
+                        <span className="text-[#22D3EE] mt-1 shrink-0">•</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="mt-4 md:mt-0 md:ml-4">
-                  <span className="inline-block px-3 py-1 text-xs bg-[#F9A8D4]/20 text-[#F9A8D4] border border-[#F9A8D4]/30 rounded">
-                    Eğitim
-                  </span>
-                  <p className="text-sm text-[#E0E0E0]/60 mt-2">
-                    {edu.period}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-

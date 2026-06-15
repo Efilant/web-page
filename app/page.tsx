@@ -1,31 +1,34 @@
 import Header from './components/Header';
 import Background from './components/Background';
 import Hero from './components/Hero';
+import VisitTracker from './components/VisitTracker';
 import About from './components/About';
 import Education from './components/Education';
 import Experience from './components/Experience';
-import Clubs from './components/Clubs';
-import Projects from './components/Projects';
-import Awards from './components/Awards';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import { getSiteContent } from '@/lib/siteContent';
 
-export default function Home() {
+export default async function Home() {
+  const content = await getSiteContent();
+
   return (
     <main className="min-h-screen lg:pl-72 relative">
       <Background />
+      <VisitTracker />
       <Header />
-      <Hero />
+      <Hero content={content} />
       <About />
       <Education />
       <Experience />
-      <Clubs />
-      <Projects />
-      <Awards />
       <Skills />
+      <Projects />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

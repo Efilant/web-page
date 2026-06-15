@@ -67,41 +67,42 @@ const certifications: CertificationItem[] = [
 
 export default function Awards() {
   return (
-    <section id="awards" className="min-h-screen px-4 py-20 pt-32 relative z-10">
-      <div className="max-w-7xl mx-auto">
+    <section id="awards" className="section-shell section-theme-awards">
+      <div className="max-w-7xl mx-auto section-panel p-6 md:p-10">
         <div className="mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#E0E0E0] mb-4">
+          <span className="section-kicker">Recognition</span>
+          <h2 className="font-heading section-title">
             Ödüller ve Tanınmalar
           </h2>
-          <div className="h-1 w-24 bg-[#EC4899]"></div>
+          <div className="section-divider"></div>
         </div>
 
         {/* Ödüller */}
         <div className="mb-16">
-          <h3 className="font-heading text-2xl md:text-3xl font-bold text-[#EC4899] mb-8">
+          <h3 className="font-heading text-2xl md:text-3xl font-bold text-[#8EF4FF] mb-8">
             Ödüller
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {awards.map((award, index) => (
               <div
                 key={index}
-                className="bg-[#1E1E1E] border border-[#2A2A2A] rounded-lg p-6 hover:border-[#EC4899] hover:-translate-y-1 transition-all duration-300"
+                className="glass-card p-6"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-heading text-xl font-bold text-[#E0E0E0] flex-1">
+                  <h3 className="font-heading text-xl font-bold text-[#F5F7FF] flex-1">
                     {award.title}
                   </h3>
-                  <span className="text-xs px-2 py-1 bg-[#EC4899]/20 text-[#EC4899] border border-[#EC4899]/30 rounded">
+                  <span className="text-xs px-2 py-1 bg-[#22D3EE]/20 text-[#8EF4FF] border border-[#22D3EE]/35 rounded">
                     {award.year}
                   </span>
                 </div>
                 
-                <p className="text-[#F9A8D4] mb-2 text-sm">
+                <p className="text-[#C084FC] mb-2 text-sm">
                   {award.organization}
                 </p>
                 
                 {award.location && (
-                  <p className="text-[#E0E0E0]/60 text-xs mb-2">
+                  <p className="text-[#E6EEFF]/60 text-xs mb-2">
                     📍 {award.location}
                   </p>
                 )}
@@ -112,22 +113,22 @@ export default function Awards() {
 
         {/* Sertifikalar */}
         <div>
-          <h3 className="font-heading text-2xl md:text-3xl font-bold text-[#F9A8D4] mb-8">
+          <h3 className="font-heading text-2xl md:text-3xl font-bold text-[#C084FC] mb-8">
             Sertifikalar
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-[#1E1E1E] border border-[#2A2A2A] rounded-lg p-6 hover:border-[#F9A8D4] hover:-translate-y-1 transition-all duration-300"
+                className="glass-card p-6"
               >
-                <h4 className="font-heading text-lg font-bold text-[#E0E0E0] mb-2">
+                <h4 className="font-heading text-lg font-bold text-[#F5F7FF] mb-2">
                   {cert.name}
                 </h4>
-                <p className="text-[#F9A8D4] mb-2 text-sm">
+                <p className="text-[#8EF4FF] mb-2 text-sm">
                   {cert.issuer}
                 </p>
-                <p className="text-[#E0E0E0]/60 text-xs">
+                <p className="text-[#E6EEFF]/60 text-xs">
                   {cert.year}
                 </p>
               </div>

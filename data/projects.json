@@ -1,0 +1,268 @@
+{
+  "projects": [
+    {
+      "id": "proj-1",
+      "slug": "istanbul-hava-kalitesi",
+      "title": {
+        "tr": "İstanbul Hava Kalitesi Analiz ve Tahmin Uygulaması",
+        "en": "Istanbul Air Quality Analysis & Prediction App"
+      },
+      "summary": {
+        "tr": "İstanbul hava kalitesi verilerini gerçek zamanlı görselleştiren ve tahmin eden Streamlit uygulaması",
+        "en": "A Streamlit app that visualizes and predicts Istanbul air quality data in real time"
+      },
+      "description": {
+        "tr": "İstanbul'daki hava kalitesi verilerini gerçek zamanlı görselleştiren ve analiz eden web tabanlı uygulama geliştirdim; EDA süreçlerini interaktif Streamlit arayüzü üzerinden sundum. İstasyon bazlı anlık PM10 tahminleri, kirletici ve meteorolojik veri panelleri ile 6 saatlik trend grafikleri içeriyor.",
+        "en": "I developed a web-based application that visualizes and analyzes air quality data in Istanbul in real time, presenting EDA processes through an interactive Streamlit interface. It includes station-based instant PM10 predictions, pollutant and meteorological data panels, and 6-hour trend charts."
+      },
+      "role": {
+        "tr": "Geliştirici",
+        "en": "Developer"
+      },
+      "year": "2025",
+      "category": "software",
+      "featured": true,
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "Pandas"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "plugins": [],
+      "highlights": [
+        {
+          "tr": "İstasyon bazlı anlık hava kalitesi izleme portalı",
+          "en": "Station-based real-time air quality monitoring portal"
+        },
+        {
+          "tr": "PM10 tahmin analizi ve 6 saatlik trend grafiği",
+          "en": "PM10 prediction analysis and 6-hour trend chart"
+        },
+        {
+          "tr": "Kirletici ve meteorolojik veri panelleri",
+          "en": "Pollutant and meteorological data panels"
+        },
+        {
+          "tr": "İnteraktif EDA arayüzü",
+          "en": "Interactive EDA interface"
+        }
+      ],
+      "images": [
+        {
+          "url": "/projects/istanbul-hava-kalitesi-dashboard.png",
+          "alt": "İstanbul Hava Kalitesi İzleme Portalı ana ekran"
+        },
+        {
+          "url": "/projects/istanbul-hava-kalitesi-tahmin.png",
+          "alt": "Tahmin analizi ve 6 saatlik PM10 trend grafiği"
+        }
+      ],
+      "links": [
+        {
+          "label": "Canlı Uygulama",
+          "url": "https://hava-kalitesi-app.streamlit.app",
+          "type": "demo"
+        }
+      ]
+    },
+    {
+      "id": "proj-2",
+      "slug": "dijital-gebelik-takibi",
+      "title": {
+        "tr": "Dijital Gebelik Takibi Mobil Uygulaması",
+        "en": "Digital Pregnancy Tracking Mobile App"
+      },
+      "summary": {
+        "tr": "TÜBİTAK 2209-A destekli sağlık verisi takip uygulaması",
+        "en": "A TÜBİTAK 2209-A funded health data tracking application"
+      },
+      "description": {
+        "tr": "Flutter ve Dart ile mobil arayüz geliştirirken, Django REST Framework ile API endpoint'leri oluşturup Celery/Redis ile asenkron yapıları entegre ettim. Kullanıcıların sağlık verilerini (kilo, uyku, su) yönetme modüllerini ve gelecekteki analizler için veri depolama altyapılarını tasarladım.",
+        "en": "While developing the mobile interface with Flutter and Dart, I built API endpoints with Django REST Framework and integrated asynchronous structures with Celery/Redis. I designed modules for users to manage health data (weight, sleep, water intake) and data storage infrastructure for future analytics."
+      },
+      "role": {
+        "tr": "Proje Lideri & Geliştirici",
+        "en": "Project Lead & Developer"
+      },
+      "year": "2025",
+      "category": "software",
+      "featured": true,
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Django REST",
+        "Celery",
+        "Redis",
+        "PostgreSQL"
+      ],
+      "languages": [
+        "Python",
+        "Dart"
+      ],
+      "plugins": [],
+      "highlights": [
+        {
+          "tr": "TÜBİTAK 2209-A araştırma projesi desteği",
+          "en": "Supported by TÜBİTAK 2209-A research grant"
+        },
+        {
+          "tr": "Asenkron görev yönetimi (Celery/Redis)",
+          "en": "Asynchronous task management (Celery/Redis)"
+        },
+        {
+          "tr": "Sağlık verisi takip modülleri",
+          "en": "Health data tracking modules"
+        }
+      ],
+      "images": [],
+      "links": []
+    },
+    {
+      "id": "proj-3",
+      "slug": "speak-sirius-ata-talk",
+      "title": {
+        "tr": "Speak Sirius ve Ata Talk Etkinlikleri",
+        "en": "Speak Sirius and Ata Talk Events"
+      },
+      "summary": {
+        "tr": "Teknoloji ve kariyer odaklı topluluk etkinlik serisi",
+        "en": "A community event series focused on technology and careers"
+      },
+      "description": {
+        "tr": "Sektör liderleri, akademisyenler ve uzman konuşmacılar ile düzenlenen etkinlik serisi. Genç katılımcılara kariyer yönlendirmesi ve teknoloji farkındalığı kazandıran süreçli topluluk çalışması.",
+        "en": "An event series organized with industry leaders, academics, and expert speakers. A community initiative that provides career guidance and technology awareness for young participants."
+      },
+      "role": {
+        "tr": "Organizasyon Lideri, Moderasyon",
+        "en": "Organization Lead, Moderator"
+      },
+      "year": "2023",
+      "category": "social",
+      "featured": false,
+      "technologies": [
+        "Organizasyon",
+        "Liderlik",
+        "Topluluk Yönetimi"
+      ],
+      "languages": [
+        "Türkçe",
+        "İngilizce"
+      ],
+      "plugins": [
+        "Notion",
+        "Canva"
+      ],
+      "highlights": [
+        {
+          "tr": "Konuşmacı yönetimi ve planlama",
+          "en": "Speaker management and planning"
+        },
+        {
+          "tr": "Online etkinlik akışı tasarımı",
+          "en": "Online event flow design"
+        },
+        {
+          "tr": "Gençlere kariyer mentorluğu",
+          "en": "Career mentoring for youth"
+        }
+      ],
+      "images": [],
+      "links": []
+    },
+    {
+      "id": "proj-4",
+      "slug": "atarob-kardes-okul",
+      "title": {
+        "tr": "AtaRob Kardeş Okul Projesi",
+        "en": "AtaRob Sister School Project"
+      },
+      "summary": {
+        "tr": "Lise öğrencileri için kültür-bilim iş birliği modeli",
+        "en": "A culture-science collaboration model for high school students"
+      },
+      "description": {
+        "tr": "Lise öğrencileri arasında kültür, sanat, bilim ve teknoloji alanlarında iş birliğini destekleyen sosyal sorumluluk projesi. Proje sürecinde mentorluk ve takım koordinasyonu ana odak olmuştur.",
+        "en": "A social impact project that encourages collaboration among high school students in culture, arts, science, and technology. Mentorship and team coordination were the main focus."
+      },
+      "role": {
+        "tr": "Proje Yönetimi, Mentor",
+        "en": "Project Management, Mentor"
+      },
+      "year": "2023",
+      "category": "social",
+      "featured": false,
+      "technologies": [
+        "Proje Yönetimi",
+        "Mentorluk",
+        "Sosyal Etki"
+      ],
+      "languages": [
+        "Türkçe"
+      ],
+      "plugins": [
+        "Google Workspace"
+      ],
+      "highlights": [
+        {
+          "tr": "Okullar arası iletişim koordinasyonu",
+          "en": "Inter-school communication coordination"
+        },
+        {
+          "tr": "Gençlerin teknolojiye erişimi",
+          "en": "Improving youth access to technology"
+        }
+      ],
+      "images": [],
+      "links": []
+    },
+    {
+      "id": "proj-5",
+      "slug": "steam-wars",
+      "title": {
+        "tr": "STEAM WARS",
+        "en": "STEAM WARS"
+      },
+      "summary": {
+        "tr": "STEAM odaklı seminer ve atölyeler",
+        "en": "STEAM-focused seminars and workshops"
+      },
+      "description": {
+        "tr": "İlkokul, ortaokul ve liselerde STEAM etkinlikleri, seminerler ve konferansların planlanması ve uygulanması. Eğitim etkisi yüksek topluluk odaklı bir inisiyatif.",
+        "en": "Planning and execution of STEAM workshops, seminars, and conferences in primary, middle, and high schools. A community initiative with high educational impact."
+      },
+      "role": {
+        "tr": "Organizasyon ve Sunum",
+        "en": "Organization and Presentation"
+      },
+      "year": "2023",
+      "category": "social",
+      "featured": false,
+      "technologies": [
+        "Eğitim",
+        "Organizasyon",
+        "Sunum"
+      ],
+      "languages": [
+        "Türkçe"
+      ],
+      "plugins": [
+        "Canva",
+        "CapCut"
+      ],
+      "highlights": [
+        {
+          "tr": "STEAM bilinci yaygınlaştırma",
+          "en": "Spreading STEAM awareness"
+        },
+        {
+          "tr": "Okul bazlı etkinlik formatları",
+          "en": "School-based event formats"
+        }
+      ],
+      "images": [],
+      "links": []
+    }
+  ]
+}

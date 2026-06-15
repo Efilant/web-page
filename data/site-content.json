@@ -1,0 +1,56 @@
+{
+  "heroTitle": {
+    "tr": "Merhaba, Ben Elif Altun",
+    "en": "Hello, I'm Elif Altun"
+  },
+  "heroRoles": {
+    "tr": [
+      "Yazılım Mühendisliği Öğrencisi",
+      "AI & Veri Odaklı Geliştirici"
+    ],
+    "en": [
+      "Software Engineering Student",
+      "AI & Data-Driven Developer"
+    ]
+  },
+  "heroDescription": {
+    "tr": "Kocaeli Üniversitesi'nde Yazılım Mühendisliği 3. sınıf öğrencisiyim. Yapay Zeka, Makine Öğrenmesi ve AI tabanlı yazılım geliştirme alanlarında derinleşiyor; Python, C# ve modern web teknolojileriyle SaaS ürünleri, hava kalitesi analizleri ve sağlık uygulamaları gibi veri odaklı projeler geliştiriyorum.",
+    "en": "I'm a third-year Software Engineering student at Kocaeli University. I specialize in Artificial Intelligence, Machine Learning, and AI-powered software development, building data-driven projects such as SaaS products, air quality analytics, and health applications with Python, C#, and modern web technologies."
+  },
+  "primaryCtaText": {
+    "tr": "Projelerimi İncele",
+    "en": "View My Projects"
+  },
+  "primaryCtaHref": "#projects",
+  "secondaryCtaText": {
+    "tr": "CV'mi İndir (PDF)",
+    "en": "Download CV (PDF)"
+  },
+  "secondaryCtaHref": "/Elif_Altun_CV.pdf",
+  "highlights": [
+    {
+      "id": "highlight-1",
+      "title": {
+        "tr": "TÜBİTAK 2209-A Destekli Proje",
+        "en": "TÜBİTAK 2209-A Supported Project"
+      },
+      "description": {
+        "tr": "Dijital Gebelik Takibi mobil uygulamasında Flutter, Django REST ve Celery/Redis ile uçtan uca geliştirme.",
+        "en": "End-to-end development on the Digital Pregnancy Tracking mobile app with Flutter, Django REST, and Celery/Redis."
+      },
+      "featured": true
+    },
+    {
+      "id": "highlight-2",
+      "title": {
+        "tr": "Techcareer Kod Düzeltme — 1.lik",
+        "en": "Techcareer Code Correction — 1st Place"
+      },
+      "description": {
+        "tr": "Kasım 2025'te Techcareer.net Kod Düzeltme Yarışması'nda birincilik ödülü.",
+        "en": "First place at the Techcareer.net Code Correction Competition in November 2025."
+      },
+      "featured": true
+    }
+  ]
+}
